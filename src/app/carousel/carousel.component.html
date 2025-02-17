@@ -1,0 +1,33 @@
+<section class="text-center py-16 px-4 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 rounded-xl shadow-xl max-w-5xl mx-auto mb-16">
+  <h2 class="text-4xl font-bold text-white">What our customers are saying</h2>
+
+  <!-- Conteneur du carrousel (centré et large limité) -->
+  <div class="mt-8 mx-auto max-w-2xl w-full">
+    <!-- Contenu du carrousel -->
+    <div class="flex justify-center items-center">
+      <!-- Image Client -->
+      <div class="flex-shrink-0">
+        <img [src]="slides[currentSlide].image" alt="Customer" class="w-24 h-24 rounded-full object-cover border-4 border-white" />
+      </div>
+
+      <!-- Témoignage -->
+      <div class="ml-6 text-white">
+        <p class="text-xl font-semibold">{{ slides[currentSlide].name }}</p>
+        <p class="text-lg">{{ slides[currentSlide].role }}</p>
+        <p class="mt-4 text-base leading-relaxed italic">{{ slides[currentSlide].quote }}</p>
+      </div>
+    </div>
+
+    <!-- Flèches de navigation -->
+    <div class="mt-8 flex justify-center space-x-4">
+      <button (click)="prevSlide()" class="text-white bg-blue-700 hover:bg-blue-800 p-2 rounded-full">
+        <span>&lt;</span>
+      </button>
+      <button (click)="nextSlide()" class="text-white bg-blue-700 hover:bg-blue-800 p-2 rounded-full">
+        <span>&gt;</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
